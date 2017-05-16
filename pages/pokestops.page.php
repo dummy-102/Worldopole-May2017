@@ -1,10 +1,10 @@
 <header id="single-header">
 	<div class="row">
-		<div class="col-md-12 text-center">
+		<div class="col-md-12 text-center"><br><br>
 			<h1>
 				<?= sprintf($locales->POKESTOPS_TITLE, $config->infos->city); ?>
 			</h1>
-			
+
 		</div>
 	</div>
 </header>
@@ -26,13 +26,13 @@
 
 
 <div class="row">
-	
+
 	<div class="col-md-12">
-	
+
 		<div id="map">
-		
+
 		</div>
-	
+
 	</div>
 
 </div>

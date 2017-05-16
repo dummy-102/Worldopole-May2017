@@ -43,6 +43,8 @@ function initMap()
 						}
 					});
 
+					map.setMapTypeId('pogo_style');
+					
 					$.getJSON( 'core/json/pogostyle.json', function( data ) {
 						var styledMap_pogo = new google.maps.StyledMapType(data, {name: 'PoGo'});
 						map.mapTypes.set('pogo_style', styledMap_pogo);

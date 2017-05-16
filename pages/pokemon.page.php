@@ -1,5 +1,5 @@
 <!-- Header -->
-<header id="single-header">
+<header id="single-header"><br><br>
 
 	<!-- Breadcrumb -->
 	<div class="row">
@@ -305,7 +305,7 @@
 						<th><a href="pokemon/<?= $pokemon->id ?>?order=disappear_time<?php echo $top_order == 'disappear_time' && !isset($_GET['direction']) ? '&direction=desc' : ''; ?>#top50"><?= $locales->DATE ?> <i class="fa fa-sort" aria-hidden="true"></i></a></th>
 					</tr>
 				</thead>
-			
+
 				<tbody>
 					<?php
 					$i = 0;

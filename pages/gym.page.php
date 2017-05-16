@@ -1,10 +1,10 @@
 <header id="single-header">
 	<div class="row">
-		<div class="col-md-12 text-center">
+		<div class="col-md-12 text-center"><br><br>
 			<h1>
 				<?= $locales->GYMS_TITLE ?>
 			</h1>
-			
+
 		</div>
 	</div>
 </header>
@@ -14,18 +14,18 @@
 
 
 	<?php
-	
+
 	foreach ($teams as $team_name => $team) {
 		// We do not display the team rocket result as it's not a real team
-		
+
 		if ($team_name != 'rocket') {
 			$upper_team_name = strtoupper($team_name);
 			$lower_team_name	= strtolower($team_name);
-		
+
 	?>
-		
+
 	<div class="col-md-4 col-sm-4 col-xs-12 big-data"> <!-- <?= $team_name ?> -->
-		
+
 		<h2 style="margin:0;"><img src="core/img/<?= $lower_team_name ?>.png" alt="<?= $locales->TEAM ?> <?= $team_name ?> logo" width=50 style="display:inline-block;" class="team-logo" /> <?= $locales->TEAM ?> <?= $locales->$upper_team_name ?></h2>
 
 		<div class="row" style="margin-top:1em;">
@@ -40,18 +40,18 @@
 
 		<div class="row">
 			<p style="margin-top:1em"><?= $locales->GYMS_GUARDIANS ?></p>
-			
+
 			<?php foreach ($team->guardians as $guardian) { ?>
-			
+
 				<div class="col-xs-4 pokemon-single">
 					<a href="pokemon/<?= $guardian ?>">
 					<img src="core/pokemons/<?= $guardian.$config->system->pokeimg_suffix ?>" alt="<?= $pokemons->pokemon->$guardian->name ?>" class="img-responsive" width=150>
 					</a>
 				</div>
-			
-			
+
+
 			<?php }?>
-			
+
 		</div>
 	</div>
 
@@ -80,14 +80,14 @@
 <?php } ?>
 
 <div class="row">
-	
+
 	<div class="col-md-12">
-	
+
 		<div id="map">
-		
+
 		</div>
 
-	
+
 	</div>
 
 </div>
@@ -95,12 +95,12 @@
 	<div class="row area gym_details" id="gym_details_template">
 			<div id="gymDetail">
 				<div id="gymInfos">
-					<div id="circleImage">				
+					<div id="circleImage">
 					</div>
-					
+
 					<div id="gymName">
-						
-					
+
+
 					</div>
 					<div id="levelMeter">
 						<div class="progress">
@@ -156,7 +156,7 @@
 						<?= $locales->GYMS_NO_DEFENDER ?>
 					</div>
 				</div>
-				
+
 			</div>
 	</div>
 </div>

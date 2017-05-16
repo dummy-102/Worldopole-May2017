@@ -50,6 +50,8 @@ function initMap()
 					map.set('styles', data);
 				});
 
+				map.setMapTypeId('pogo_style');
+				
 				$.ajax({
 					'async': true,
 					'type': "GET",

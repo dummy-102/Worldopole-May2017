@@ -79,7 +79,7 @@ function initMap() {
 		
 		initHeatmap();
 		initSelector(pokeimg_suffix);
-		
+		map.setMapTypeId('pogo_style');
 	});
 }
 
@@ -87,12 +87,13 @@ function initSelector(pokeimg_suffix){
 	$('#heatmapSelector').click(function(){
 		hideLive();
 		showHeatmap();
+		map.setMapTypeId('pogo_style');
 		$('#heatmapSelector').addClass('active');
 		$('#liveSelector').removeClass('active');
 	});
 	$('#liveSelector').click(function(){
 		hideHeatmap();
-		map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+		map.setMapTypeId('pogo_style');
 		initLive(pokeimg_suffix);
 		
 		

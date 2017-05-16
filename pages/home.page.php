@@ -1,11 +1,32 @@
 <header id="single-header">
 	<div class="row">
-		<div class="col-md-12 text-center">
+		<div class="col-md-12 text-center"><br><br>
 			<h1>
 				<?= $config->infos->site_title ?>
 				<br>
 				<small><?= sprintf($config->infos->site_claim, $config->infos->city); ?></small>
 			</h1>
+
+			<center>
+				<audio id="myAudio"
+				 <source src="http://pokehamilton.com/Pok%C3%A9monTheme.mp3"
+						 type='audio/mp3'>
+				 Your webbrowser does not support the HTML5 Audio element.
+				</audio>
+				<button type="button" onclick="aud_play_pause()">Play/Pause</button>
+				<script>
+					function aud_play_pause() {
+					  var myAudio = document.getElementById("myAudio");
+					  if (myAudio.paused) {
+						myAudio.play();
+					  } else {
+						myAudio.pause();
+					  }
+					}
+				</script>
+			</center>
+
+			<br><center><a href='https://www.paypal.me/ChrisEden' target='_blank'><img src='core/img/donate.png' alt='Donate logo' height='25' width='50' ></a></center>
 
 		</div>
 	</div>
@@ -51,13 +72,13 @@
 <div class="row area big-padding">
 	<div class="col-md-12 text-center">
 		<h2 class="text-center sub-title">
-			<?php 
+			<?php
 			if ($config->system->recents_filter) { ?>
 				<?= $locales->RECENT_MYTHIC_SPAWNS ?>
-			<?php 
+			<?php
 			} else { ?>
 				<?= $locales->RECENT_SPAWNS ?>
-			<?php 
+			<?php
 			} ?>
 		</h2>
 		<div class="last-mon-js">
@@ -86,7 +107,7 @@
 									<span class="sr-only"><?= $locales->STAMINA ?> IV: <?= $pokemon->iv->stamina ?></span><?= $pokemon->iv->stamina ?>
 								</div>
 							</div>
-						<?php 
+						<?php
 						} else { ?>
 							<div class="progress" style="height: 6px; width: 80%; margin: 5px auto 0 auto;">
 								<div title="Attack IV: <?= $pokemon->iv->attack ?>" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="<?= $pokemon->iv->attack ?>" aria-valuemin="0" aria-valuemax="45" style="width: <?= ((100/15)*$pokemon->iv->attack)/3 ?>%">
@@ -116,7 +137,7 @@
 									<span class="sr-only"><?= $locales->STAMINA ?> IV: <?= $locales->NOT_AVAILABLE ?></span>?
 								</div>
 							</div>
-						<?php 
+						<?php
 						} else { ?>
 						<div class="progress" style="height: 6px; width: 80%; margin: 5px auto 0 auto;">
 							<div title="IV not available" class="progress-bar" role="progressbar" style="width: 100%; background-color: rgb(210,210,210)" aria-valuenow="1" aria-valuemin="0" aria-valuemax="1">
@@ -142,7 +163,7 @@
 <div class="row big padding">
 	<h2 class="text-center sub-title"><?= $locales->FIGHT_TITLE ?></h2>
 
-		<?php 
+		<?php
 			foreach ($home->teams as $team => $total) {
 				if ($home->teams->rocket) { ?>
 
@@ -165,7 +186,7 @@
 				} ?>
 							</div>
 						</div>
-					</div>					
+					</div>
 				<?php
 			} ?>
 </div>

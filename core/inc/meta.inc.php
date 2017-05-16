@@ -20,7 +20,7 @@
 
 <?php if (!isset($_GET['page'])) { ?>
 
-		<title><?= $config->infos->site_name ?> | <?= strip_tags($config->infos->site_title); ?></title>
+		<title><?= $config->infos->site_name ?> <?= strip_tags($config->infos->site_title); ?></title>
 
 		<link rel="canonical" href="<?= HOST_URL ?>" />
 		<base href="<?= HOST_URL ?>">

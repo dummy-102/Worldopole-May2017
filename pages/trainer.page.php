@@ -1,6 +1,6 @@
 <header id="single-header">
 <div class="row">
-	<div class="col-md-12 text-center">
+	<div class="col-md-12 text-center"><br><br>
 		<h1>
 			<?= $locales->TRAINERS_TITLE ?>
 		</h1>
